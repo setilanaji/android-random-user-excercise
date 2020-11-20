@@ -25,6 +25,7 @@ class UsersViewModel(val context: Context?): ViewModel() {
             override fun onResponse(call: Call<UserResponse>, response: Response<UserResponse>) {
                 if (response.isSuccessful){
                     _users.postValue(response.body()?.result)
+
                 }
             }
 

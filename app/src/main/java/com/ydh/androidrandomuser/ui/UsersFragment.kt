@@ -11,6 +11,7 @@ import com.ydh.androidrandomuser.R
 import com.ydh.androidrandomuser.viewmodel.UserViewModelFactory
 import com.ydh.androidrandomuser.viewmodel.UsersViewModel
 import com.ydh.androidrandomuser.databinding.FragmentUsersBinding
+import com.ydh.androidrandomuser.model.UserModel
 
 class UsersFragment : Fragment() {
 
@@ -47,8 +48,27 @@ class UsersFragment : Fragment() {
 
     private fun setObserver(){
         userViewModel.users.observe(viewLifecycleOwner, {
-            userAdapter?.setData(it)
+            generateProduct(it)
+
         })
+    }
+
+    private fun generateProduct(it: List<UserModel>) {
+        val list = mutableListOf<User>()
+        var temp = ""
+
+        it.forEach { model ->
+            if (!temp.equals(model.name.first[0].toUpperCase().toString())) {
+                temp = model.name.first[0].toUpperCase().toString()
+
+                list.add(User.Category(temp))
+            }
+
+
+            list.add(User.Data(model))
+        }
+        userAdapter?.setData(list)
+//        adapter.list = list
     }
 
 //    private fun setAdapter(){
