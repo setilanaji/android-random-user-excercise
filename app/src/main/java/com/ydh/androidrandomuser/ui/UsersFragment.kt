@@ -6,12 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProviders
 import com.ydh.androidrandomuser.R
-import com.ydh.androidrandomuser.UserAdapter
-import com.ydh.androidrandomuser.UserViewModelFactory
-import com.ydh.androidrandomuser.UsersViewModel
+import com.ydh.androidrandomuser.viewmodel.UserViewModelFactory
+import com.ydh.androidrandomuser.viewmodel.UsersViewModel
 import com.ydh.androidrandomuser.databinding.FragmentUsersBinding
 
 class UsersFragment : Fragment() {

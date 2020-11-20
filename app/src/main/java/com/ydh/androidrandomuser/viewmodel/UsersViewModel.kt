@@ -1,10 +1,12 @@
-package com.ydh.androidrandomuser
+package com.ydh.androidrandomuser.viewmodel
 
 import android.content.Context
 import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.ydh.androidrandomuser.ApiClient
+import com.ydh.androidrandomuser.UserResponse
 import com.ydh.androidrandomuser.model.UserModel
 import retrofit2.Call
 import retrofit2.Callback

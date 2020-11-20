@@ -1,14 +1,14 @@
-package com.ydh.androidrandomuser
+package com.ydh.androidrandomuser.ui
 
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.ydh.androidrandomuser.R
 import com.ydh.androidrandomuser.databinding.ItemUserBinding
 import com.ydh.androidrandomuser.model.UserModel
 
@@ -18,7 +18,7 @@ class UserAdapter(
 ) : RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
     private var userList = listOf<UserModel>()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserAdapter.UserViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
 
         val inflater = LayoutInflater.from(context)
         val binding: ItemUserBinding =
@@ -27,7 +27,7 @@ class UserAdapter(
         return UserViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: UserAdapter.UserViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
         holder.userBinding.user = userList[position]
     }
 

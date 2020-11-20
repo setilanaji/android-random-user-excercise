@@ -1,4 +1,4 @@
-package com.ydh.androidrandomuser
+package com.ydh.androidrandomuser.viewmodel
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
