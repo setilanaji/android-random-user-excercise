@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<layout-->
-<!--    >-->
-<!--    <data>-->
-<!--&lt;!&ndash;        <variable&ndash;&gt;-->
-<!--&lt;!&ndash;            name="user"&ndash;&gt;-->
-<!--&lt;!&ndash;            type="com.ydh.androidrandomuser.model.UserModel" />&ndash;&gt;-->
-<!--    </data>-->
+<layout
+    >
+    <data>
+        <variable
+            name="user"
+            type="com.ydh.androidrandomuser.model.UserModel" />
+    </data>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -32,7 +32,7 @@
                     android:id="@+id/iv_item_user_profile"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-
+app:userImage="@{user.picture.thumbnail}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -44,36 +44,36 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
-                    android:text="k"
+                    android:text="@{user.name.first}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/iv_item_user_profile"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <!--                <TextView-->
-                <!--                    android:id="@+id/tv_item_user_email"-->
-                <!--                    android:layout_width="0dp"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:layout_marginTop="8dp"-->
-                <!--                    android:text="@{user.email}"-->
-                <!--                    app:layout_constraintBottom_toTopOf="@+id/tv_item_user_phone"-->
-                <!--                    app:layout_constraintEnd_toEndOf="@+id/tv_item_user_name"-->
-                <!--                    app:layout_constraintHorizontal_bias="0.5"-->
-                <!--                    app:layout_constraintStart_toStartOf="@+id/tv_item_user_name"-->
-                <!--                    app:layout_constraintTop_toBottomOf="@+id/tv_item_user_name" />-->
+                                <TextView
+                                    android:id="@+id/tv_item_user_email"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:text="@{user.email}"
+                                    app:layout_constraintBottom_toTopOf="@+id/tv_item_user_phone"
+                                    app:layout_constraintEnd_toEndOf="@+id/tv_item_user_name"
+                                    app:layout_constraintHorizontal_bias="0.5"
+                                    app:layout_constraintStart_toStartOf="@+id/tv_item_user_name"
+                                    app:layout_constraintTop_toBottomOf="@+id/tv_item_user_name" />
 
-                <!--                <TextView-->
-                <!--                    android:id="@+id/tv_item_user_phone"-->
-                <!--                    android:layout_width="0dp"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:layout_marginTop="8dp"-->
-                <!--                    android:text="@{user.phone}"-->
-                <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-                <!--                    app:layout_constraintEnd_toEndOf="@+id/tv_item_user_email"-->
-                <!--                    app:layout_constraintHorizontal_bias="0.5"-->
-                <!--                    app:layout_constraintStart_toStartOf="@+id/tv_item_user_email"-->
-                <!--                    app:layout_constraintTop_toBottomOf="@+id/tv_item_user_email" />-->
+                                <TextView
+                                    android:id="@+id/tv_item_user_phone"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:text="@{user.phone}"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="@+id/tv_item_user_email"
+                                    app:layout_constraintHorizontal_bias="0.5"
+                                    app:layout_constraintStart_toStartOf="@+id/tv_item_user_email"
+                                    app:layout_constraintTop_toBottomOf="@+id/tv_item_user_email" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
-<!--</layout>-->
+</layout>

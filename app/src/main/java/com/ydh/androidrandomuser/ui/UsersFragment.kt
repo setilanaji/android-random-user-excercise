@@ -58,12 +58,11 @@ class UsersFragment : Fragment() {
         var temp = ""
 
         it.forEach { model ->
-            if (!temp.equals(model.name.first[0].toUpperCase().toString())) {
+            if (temp != model.name.first[0].toUpperCase().toString()) {
                 temp = model.name.first[0].toUpperCase().toString()
 
-                list.add(User.Category(temp))
+                list.add( User.Category(temp))
             }
-
 
             list.add(User.Data(model))
         }
