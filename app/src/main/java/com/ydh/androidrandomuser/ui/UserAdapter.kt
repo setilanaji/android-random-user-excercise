@@ -5,19 +5,14 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
-import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.ydh.androidrandomuser.R
 import com.ydh.androidrandomuser.databinding.ItemUserBinding
 import com.ydh.androidrandomuser.databinding.ItemUserCategoryTitleBinding
-import com.ydh.androidrandomuser.model.UserModel
+import com.ydh.androidrandomuser.model.User
 import java.util.*
 
-sealed class User{
-    data class Category(val category: String):User()
-    data class Data(val user: UserModel): User()
-}
+
 
 class UserAdapter(
     private val context: Context,
@@ -48,7 +43,7 @@ class UserAdapter(
         notifyItemRemoved(position)
     }
     fun restoreItem(item: User, position: Int) {
-        val arrayList = ArrayList<User>(userList)
+        val arrayList = ArrayList(userList)
         arrayList.add(position, item)
         userList = arrayList
         notifyItemInserted(position)

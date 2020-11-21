@@ -5,6 +5,6 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.ydh.androidrandomuser.ui.MainFragment"
+        android:name="com.ydh.androidrandomuser.ui.fragment.MainFragment"
         android:label="MainFragment" />
 </navigation>

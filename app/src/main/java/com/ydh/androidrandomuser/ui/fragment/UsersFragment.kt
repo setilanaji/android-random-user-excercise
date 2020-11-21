@@ -1,4 +1,4 @@
-package com.ydh.androidrandomuser.ui
+package com.ydh.androidrandomuser.ui.fragment
 
 import android.graphics.Color
 import android.os.Bundle
@@ -6,8 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.SimpleAdapter
-import androidx.annotation.NonNull
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -19,7 +17,10 @@ import com.ydh.androidrandomuser.R
 import com.ydh.androidrandomuser.viewmodel.UserViewModelFactory
 import com.ydh.androidrandomuser.viewmodel.UsersViewModel
 import com.ydh.androidrandomuser.databinding.FragmentUsersBinding
+import com.ydh.androidrandomuser.model.User
 import com.ydh.androidrandomuser.model.UserModel
+import com.ydh.androidrandomuser.util.SwipeToDelete
+import com.ydh.androidrandomuser.ui.UserAdapter
 
 class UsersFragment : Fragment() {
 

@@ -1,4 +1,4 @@
-package com.ydh.androidrandomuser.ui
+package com.ydh.androidrandomuser.ui.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,6 +10,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 import com.ydh.androidrandomuser.R
 import com.ydh.androidrandomuser.databinding.FragmentMainBinding
 import com.ydh.androidrandomuser.model.Page
+import com.ydh.androidrandomuser.ui.ViewPagerAdapter
 
 class MainFragment : Fragment() {
     lateinit var binding: FragmentMainBinding

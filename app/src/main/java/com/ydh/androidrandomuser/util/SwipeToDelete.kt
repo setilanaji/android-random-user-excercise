@@ -1,4 +1,4 @@
-package com.ydh.androidrandomuser.ui
+package com.ydh.androidrandomuser.util
 
 import android.content.Context
 import android.graphics.*
