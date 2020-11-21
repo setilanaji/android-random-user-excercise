@@ -22,7 +22,7 @@ sealed class User{
 class UserAdapter(
     private val context: Context,
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    private var userList = listOf<User>()
+    private var userList = mutableListOf<User>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
 
@@ -38,9 +38,20 @@ class UserAdapter(
 
     }
 
-    fun setData(item: List<User>){
+    fun setData(item: MutableList<User>){
         this.userList = item
         notifyDataSetChanged()
+    }
+
+    fun removeAt(position: Int) {
+        this.userList.removeAt(position)
+        notifyItemRemoved(position)
+    }
+    fun restoreItem(item: User, position: Int) {
+        val arrayList = ArrayList<User>(userList)
+        arrayList.add(position, item)
+        userList = arrayList
+        notifyItemInserted(position)
     }
 
     override fun getItemCount(): Int {
@@ -53,6 +64,10 @@ class UserAdapter(
             is User.Data -> TYPE_DATA
         }
 
+    }
+
+    fun getData(position: Int): User{
+        return userList[position]
     }
 
     class UserViewHolder(
