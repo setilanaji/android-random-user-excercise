@@ -38,8 +38,6 @@ class UserAdapter(
 
     }
 
-
-
     fun setData(item: List<User>){
         this.userList = item
         notifyDataSetChanged()

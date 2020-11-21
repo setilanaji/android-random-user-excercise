@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.ydh.androidrandomuser.R
 import com.ydh.androidrandomuser.viewmodel.UserViewModelFactory
 import com.ydh.androidrandomuser.viewmodel.UsersViewModel
@@ -34,8 +36,15 @@ class UsersFragment : Fragment() {
         setData()
         setObserver()
 
-        binding.rvUsers.adapter = userAdapter
+        binding.run{
+            rvUsers.adapter = userAdapter
+            rvUsers.addItemDecoration(DividerItemDecoration(
+                context,
+                LinearLayoutManager.VERTICAL
+            ))
+        }
         return binding.root
+
     }
 
     private fun setViewModel() {

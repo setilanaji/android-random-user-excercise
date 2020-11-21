@@ -5,9 +5,10 @@
     <data>
 
     </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         tools:context=".ui.MainFragment">
 
         <com.google.android.material.tabs.TabLayout
@@ -17,20 +18,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:tabBackground="@color/design_default_color_primary"
             app:tabIndicatorColor="@color/white"
             app:tabIndicatorFullWidth="true"
-            app:tabBackground="@color/design_default_color_primary"
             app:tabSelectedTextColor="@color/design_default_color_background"
             app:tabTextColor="@color/design_default_color_on_primary" />
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewpager"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tabs" />
-
+            app:layout_constraintTop_toBottomOf="@+id/tabs" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
