@@ -21,7 +21,7 @@ class UsersViewModel(val context: Context?): ViewModel() {
         get() = _users
 
     fun setAllUser(){
-        ApiClient.userApiService.getAllUser().enqueue(object : Callback<UserResponse> {
+        ApiClient.userApiService.getAllUser(20).enqueue(object : Callback<UserResponse> {
             override fun onResponse(call: Call<UserResponse>, response: Response<UserResponse>) {
                 if (response.isSuccessful){
                     _users.postValue(response.body()?.result)
